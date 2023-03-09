@@ -1,0 +1,10 @@
+.content {
+  background-color: rgb(242, 243, 245);
+  margin: 0;
+  height: 100vh;
+  padding: 20px;
+}
+
+.content-nav {
+  margin-left: 130px;
+}

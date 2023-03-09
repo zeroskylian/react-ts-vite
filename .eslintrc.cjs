@@ -34,18 +34,26 @@ module.exports = {
       }
     }
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'prettier',
+    'react-hooks/recommended'
+  ],
   rules: {
     'prettier/prettier': [
       'error',
       {
         singleQuote: true,
-        parser: 'flow',
+        jsxSingleQuote: false,
+        parser: 'typescript',
         semi: true
       }
     ],
-    quotes: [1, 'single'],
+    // quotes: [1, 'single'],
     // semi: [1, 'always'],
-    'no-extra-semi': 0
+    'no-extra-semi': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn'
   }
 };
