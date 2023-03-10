@@ -4,7 +4,8 @@
   height: 100vh;
   padding: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .content-nav {
@@ -13,6 +14,7 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
+  flex: 0 1 auto;
 }
 
 .content-nav-item {

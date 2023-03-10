@@ -6,9 +6,7 @@ export default function Home() {
   return (
     <div className='content'>
       <Nav />
-      sss
       <Outlet />
-      sss
     </div>
   );
 }

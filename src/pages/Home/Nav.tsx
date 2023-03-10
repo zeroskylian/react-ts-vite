@@ -32,7 +32,7 @@ function NavItem(props: { id: string; name: string }) {
           ? 'content-nav-item-active'
           : 'content-nav-item';
       }}
-      to={`/category/${props.id}`}
+      to={`category/${props.id}`}
     >
       {props.name}
     </NavLink>
