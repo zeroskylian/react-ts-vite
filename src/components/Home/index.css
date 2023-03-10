@@ -1,0 +1,37 @@
+.content {
+  background-color: rgb(242, 243, 245);
+  margin: 0;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-nav {
+  margin-left: 130px;
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-nav-item {
+  padding: 10px 20px;
+  color: rgb(112, 116, 128);
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.content-nav-item-active {
+  padding: 10px 20px;
+  color: #006fff;
+  border-radius: 6px;
+  text-decoration: none;
+  background-color: rgb(235, 242, 254);
+}
+
+.content-nav-item:hover {
+  padding: 10px 20px;
+  color: #006fff;
+  background-color: rgb(247, 248, 250);
+}

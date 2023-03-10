@@ -45,12 +45,12 @@ module.exports = {
       'error',
       {
         singleQuote: true,
-        jsxSingleQuote: false,
+        jsxSingleQuote: true,
         parser: 'typescript',
         semi: true
       }
     ],
-    // quotes: [1, 'single'],
+    quotes: [1, 'single'],
     // semi: [1, 'always'],
     'no-extra-semi': 0,
     'react-hooks/rules-of-hooks': 'error',

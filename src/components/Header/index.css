@@ -26,30 +26,22 @@
   margin-left: 20px;
 }
 
-.nav .item {
+.nav-item {
   padding: 10px;
-}
-
-.item a {
   color: #ffffff;
   text-decoration: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
-.item a:link {
-  color: #ffffff;
-}
-.item a:visited {
-  color: #ffffff;
-}
-.item a:hover {
-  color: #ffffff;
+.nav-item-active {
+  padding: 10px;
+  color: #006fff;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
-.item a:active {
-  color: #ffffff;
-}
-
-.nav .item:hover {
+.nav-item:hover,
+.nav-item-active:hover {
   border-bottom: 2px solid #bfa;
 }
 
