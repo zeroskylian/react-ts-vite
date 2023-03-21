@@ -1,5 +1,4 @@
 .header {
-  background-color: rgb(46, 46, 46);
   color: wheat;
 }
 
@@ -28,7 +27,7 @@
 
 .nav-item {
   padding: 10px;
-  color: #ffffff;
+  color: #111111;
   text-decoration: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
@@ -42,7 +41,7 @@
 
 .nav-item:hover,
 .nav-item-active:hover {
-  border-bottom: 2px solid #bfa;
+  border-bottom: 2px solid #006fff;
 }
 
 .userProfle {
