@@ -1,44 +1,43 @@
-import React, { useReducer, useState } from 'react';
-
-const initialState = 0;
-const reducer = (state: number, action: string) => {
-  switch (action) {
-    case 'increment':
-      return state + 1;
-    case 'decrement':
-      return state - 1;
-    case 'reset':
-      return initialState;
-    default:
-      return state;
-  }
-};
+import React from 'react';
+import Styles from './index.module.css';
+const UserData = [
+  { name: '张三', age: 20, gender: '男', natio: '汉族' },
+  { name: '李四', age: 18, gender: '女', natio: '满族' },
+  { name: '王五', age: 20, gender: '男', natio: '汉族' },
+  { name: '赵六', age: 20, gender: '男', natio: '汉族' }
+];
 
 export default function User() {
-  const [count, dispatch] = useReducer(reducer, initialState);
   return (
-    <div>
-      <div>Count - {count}</div>
-      <button onClick={() => dispatch('increment')}>Increment</button>
-      <button onClick={() => dispatch('decrement')}>Decrement</button>
-      <button onClick={() => dispatch('reset')}>Reset</button>
-      <CountLabel count={count} />
+    <div className={Styles.container}>
+      <table border={1}>
+        <caption>人员信息</caption>
+        <thead>
+          <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>民族</th>
+          </tr>
+        </thead>
+        <tbody>
+          {UserData.map((user) => {
+            return (
+              <tr key={user.name}>
+                <td>{user.name}</td>
+                <td>{user.age}</td>
+                <td>{user.gender}</td>
+                <td>{user.natio}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+        <tfoot>
+          <td colSpan={4} style={{ textAlign: 'right' }}>
+            合计{UserData.length}人
+          </td>
+        </tfoot>
+      </table>
     </div>
-  );
-}
-
-function CountLabel(props: { count: number }) {
-  const { count } = props;
-  const [prevCount, setPrevCount] = useState<number>(count);
-  const [trend, setTrend] = useState<string | null>(null);
-  if (prevCount !== count) {
-    setPrevCount(count);
-    setTrend(count > prevCount ? 'increasing' : 'decreasing');
-  }
-  return (
-    <>
-      <h1>{count}</h1>
-      {trend && <p>The count is {trend}</p>}
-    </>
   );
 }

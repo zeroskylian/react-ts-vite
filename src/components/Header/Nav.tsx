@@ -7,6 +7,14 @@ const navs: { name: string; path: string }[] = [
   {
     name: '人员',
     path: '/user'
+  },
+  {
+    name: '计数器',
+    path: '/counter'
+  },
+  {
+    name: '活动',
+    path: '/activity'
   }
 ];
 
