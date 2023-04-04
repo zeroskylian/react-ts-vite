@@ -17,8 +17,8 @@ const navs: { name: string; path: string }[] = [
     path: '/activity'
   },
   {
-    name: '视频',
-    path: '/video'
+    name: '伪类选择器',
+    path: '/pseudo-classes'
   }
 ];
 

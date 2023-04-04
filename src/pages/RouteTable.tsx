@@ -4,7 +4,7 @@ import Category from '@/pages/Home/catrgory';
 import Counter from '@/components/Counter';
 import User from '@/components/User';
 import Activiy from '@/components/Activity';
-import Video from '@/components/Video';
+import Pseudo from '@/components/Pseudo';
 
 const routes: RouteObject[] = [
   {
@@ -30,8 +30,8 @@ const routes: RouteObject[] = [
     element: <Activiy />
   },
   {
-    path: '/video',
-    element: <Video />
+    path: '/pseudo-classes',
+    element: <Pseudo />
   },
   {
     path: '/',
