@@ -15,6 +15,10 @@ const navs: { name: string; path: string }[] = [
   {
     name: '活动',
     path: '/activity'
+  },
+  {
+    name: '视频',
+    path: '/video'
   }
 ];
 

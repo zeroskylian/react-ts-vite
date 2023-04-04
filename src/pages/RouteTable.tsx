@@ -4,6 +4,7 @@ import Category from '@/pages/Home/catrgory';
 import Counter from '@/components/Counter';
 import User from '@/components/User';
 import Activiy from '@/components/Activity';
+import Video from '@/components/Video';
 
 const routes: RouteObject[] = [
   {
@@ -27,6 +28,10 @@ const routes: RouteObject[] = [
   {
     path: '/activity',
     element: <Activiy />
+  },
+  {
+    path: '/video',
+    element: <Video />
   },
   {
     path: '/',
