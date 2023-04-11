@@ -1,17 +1,19 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const dataSource: { id: string; name: string }[] = [
-  { id: 'comprehensive', name: '关注' },
-  { id: 'front', name: '前端' },
-  { id: 'end', name: '后端' },
-  { id: 'Android', name: 'Android' },
-  { id: 'iOS', name: 'iOS' },
+type NavItemProp = { id: string; name: string; icon: string };
+const dataSource: NavItemProp[] = [
+  { id: 'comprehensive', name: '关注', icon: 'icon-favorites' },
+  { id: 'front', name: '前端', icon: 'icon-favorites' },
+  { id: 'end', name: '后端', icon: 'icon-favorites' },
+  { id: 'Android', name: 'Android', icon: 'icon-favorites' },
+  { id: 'iOS', name: 'iOS', icon: 'icon-favorites' },
   {
     id: 'artificial intelligence',
-    name: '人工智能'
+    name: '人工智能',
+    icon: 'icon-favorites'
   },
-  { id: 'development tools', name: '开发工具' }
+  { id: 'development tools', name: '开发工具', icon: 'icon-favorites' }
 ];
 
 export default function Nav() {
@@ -24,7 +26,7 @@ export default function Nav() {
   );
 }
 
-function NavItem(props: { id: string; name: string }) {
+function NavItem(props: NavItemProp) {
   return (
     <NavLink
       className={(isActive) => {
@@ -34,6 +36,7 @@ function NavItem(props: { id: string; name: string }) {
       }}
       to={`category/${props.id}`}
     >
+      <span className={`iconfont ${props.icon}`}>{}</span>
       {props.name}
     </NavLink>
   );

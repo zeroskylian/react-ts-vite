@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4008669 */
+  src: url('iconfont.woff2?t=1681200355416') format('woff2'),
+       url('iconfont.woff?t=1681200355416') format('woff'),
+       url('iconfont.ttf?t=1681200355416') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-favorites:before {
+  content: "\e839";
+}
+
+.icon-follow:before {
+  content: "\e83b";
+}
+
+.icon-view:before {
+  content: "\e847";
+}
+
+.icon-zoom-in:before {
+  content: "\e849";
+}
+
+.icon-assessed-badge:before {
+  content: "\e84b";
+}
+
+.icon-company-fill:before {
+  content: "\e84f";
+}
+
+.icon-a-business-icon-Bigpromotion:before {
+  content: "\e823";
+}
+
+.icon-cart-empty:before {
+  content: "\e826";
+}
+
+.icon-charts-pie:before {
+  content: "\e827";
+}
+
+.icon-customer-group:before {
+  content: "\e828";
+}
+
+.icon-message-reply-template:before {
+  content: "\e82e";
+}
+

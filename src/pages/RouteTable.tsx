@@ -14,6 +14,10 @@ const routes: RouteObject[] = [
       {
         path: 'category/:id',
         element: <Category />
+      },
+      {
+        path: '',
+        element: <Navigate replace={true} to={'category/comprehensive'} />
       }
     ]
   },

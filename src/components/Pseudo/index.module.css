@@ -1,3 +1,25 @@
+.container {
+  padding: 20px;
+  color: rgb(100, 100, 100);
+  color: rgba(10%, 10%, 10%, 0.2);
+}
+
 p {
   color: black;
+}
+
+p:first-child {
+  color: red;
+}
+
+p:nth-child(2) {
+  color: cyan;
+}
+
+p:first-of-type {
+  color: aqua;
+}
+
+p:last-child {
+  color: green;
 }

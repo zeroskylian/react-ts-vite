@@ -1,9 +1,10 @@
 import React, { PropsWithChildren } from 'react';
-import './index.module.css';
+import Styles from './index.module.css';
 
 const Pseudo: React.FC = () => {
   return (
-    <div>
+    <div className={Styles.container}>
+      <span>Title</span>
       <p>1</p>
       <p>2</p>
       <p>3</p>
