@@ -1,25 +1,24 @@
-import React, {
-  HtmlHTMLAttributes,
-  useEffect,
-  useReducer,
-  useRef
-} from 'react';
-import { useMatch } from 'react-router-dom';
+import React from 'react';
+import Styles from './index.module.css';
+import classNames from 'classnames';
 
 export default function Category() {
-  const match = useMatch('/home/category/:id');
-  const refs = useRef<HTMLInputElement>(null);
-  useEffect(() => {
-    if (refs.current) {
-      refs.current.focus();
-    }
-  });
+  return (
+    <div className={Styles.container}>
+      <CategoryItem />
+      <CategoryItem />
+    </div>
+  );
+}
 
+function CategoryItem() {
   return (
     <div>
-      {match?.params.id}
-      <hr />
-      <input ref={refs} type='text' />
+      <span className={classNames([Styles.topItem, Styles.userName])}>
+        Name
+      </span>
+      <span className={Styles.topItem}>1月前</span>
+      <span className={Styles.topItem}>Java</span>
     </div>
   );
 }
