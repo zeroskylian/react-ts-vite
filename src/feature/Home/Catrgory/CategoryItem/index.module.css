@@ -1,0 +1,53 @@
+.item {
+  margin: 10px 0;
+  padding: 10px 0;
+  border-top: 1px solid #000000;
+}
+
+/* top */
+.top {
+  color: '#000000';
+  padding: 10px, 10px, 0, 10px;
+  vertical-align: baseline;
+}
+
+.top span {
+  margin: 0 10px 0 0;
+}
+
+.top-userName {
+  color: '#111111';
+  font-size: 20px;
+}
+
+/* content */
+.content {
+  padding: 5px 0;
+}
+
+.content h4 {
+  padding: 0px;
+  margin: 0px;
+}
+.content p {
+  font-size: 20px;
+  margin: 5px 0;
+  color: red;
+  line-height: 1.5;
+}
+
+/* bottom */
+.bottom {
+  margin: 0;
+}
+.bottom ul {
+  padding: 0;
+  margin: 0;
+}
+
+.bottom li {
+  list-style: none;
+  display: inline;
+  min-width: 20px;
+  padding: 0px 20px;
+}

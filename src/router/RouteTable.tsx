@@ -1,10 +1,10 @@
 import { RouteObject, Navigate } from 'react-router-dom';
-import Home from '@/pages/Home';
-import Category from '@/pages/Home/catrgory';
-import Counter from '@/components/Counter';
-import User from '@/components/User';
-import Activiy from '@/components/Activity';
-import Pseudo from '@/components/Pseudo';
+import Home from '@/feature/Home';
+import Category from '@/feature/Home/Catrgory';
+import Counter from '@/feature/Counter';
+import User from '@/feature/User';
+import Activiy from '@/feature/Activity';
+import Pseudo from '@/feature/Pseudo';
 
 const routes: RouteObject[] = [
   {
