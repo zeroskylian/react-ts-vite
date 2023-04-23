@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {}
   },
   variants: {},
-  plugins: []
+  plugins: [],
+  content: ['./src/**/*.{vue,js,ts,jsx,tsx}']
 };

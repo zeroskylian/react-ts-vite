@@ -5,6 +5,10 @@ const navs: { name: string; path: string }[] = [
     path: '/home'
   },
   {
+    name: '讨论',
+    path: '/discuss'
+  },
+  {
     name: '人员',
     path: '/user'
   },

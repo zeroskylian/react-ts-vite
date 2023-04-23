@@ -1,5 +1,5 @@
 import { useRoutes } from 'react-router-dom';
-import Header from '@/feature/Header';
+import Header from '@/router/Header';
 import RouteTable from '@/router/RouteTable';
 
 import './App.css';

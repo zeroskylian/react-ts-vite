@@ -1,8 +1,9 @@
 import { RouteObject, Navigate } from 'react-router-dom';
 import Home from '@/feature/Home';
 import Category from '@/feature/Home/Catrgory';
-import Counter from '@/feature/Counter';
+import Discuss from '@/feature/Discuss';
 import User from '@/feature/User';
+import Counter from '@/feature/Counter';
 import Activiy from '@/feature/Activity';
 import Pseudo from '@/feature/Pseudo';
 
@@ -20,6 +21,10 @@ const routes: RouteObject[] = [
         element: <Navigate replace={true} to={'category/comprehensive'} />
       }
     ]
+  },
+  {
+    path: '/discuss',
+    element: <Discuss />
   },
   {
     path: '/user',
