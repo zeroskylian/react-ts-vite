@@ -23,7 +23,7 @@ function Add() {
       <Counter name={'C'} count={value!.count} />
       <Button
         onClick={() => {
-          value?.dispatch!('A');
+          value?.dispatch!('C');
         }}
       >
         +1
