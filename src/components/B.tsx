@@ -1,30 +1,33 @@
 import React, { useContext } from 'react';
-import ancestorContext, { BContext } from '../context';
 import Counter from './Counter';
 import { Button } from 'antd';
+import { useStore } from '../store';
+import { produce } from 'immer';
+import { getBI } from '../store';
+import { shallow } from 'zustand/shallow';
 
 export default function B() {
-  const context = useContext(ancestorContext);
-
   return (
-    <BContext.Provider value={{ ...context.bi, dispatch: context?.dispatch }}>
-      <div className='box'>
-        B
-        <Add />
-      </div>
-    </BContext.Provider>
+    <div className='box'>
+      B
+      <Add />
+    </div>
   );
 }
 
 function Add() {
-  const value = useContext(BContext);
+  const store = useStore(getBI, shallow);
   console.log('B render');
   return (
     <div>
-      <Counter name={'B'} count={value!.count} />
+      <Counter name={'B'} count={store.count} />
       <Button
         onClick={() => {
-          value?.dispatch!('B');
+          useStore.setState({
+            bi: {
+              count: store.count + 1
+            }
+          });
         }}
       >
         +1

@@ -1,29 +1,32 @@
 import React, { useContext } from 'react';
-import ancestorContext, { CContext } from '../context';
 import Counter from './Counter';
 import { Button } from 'antd';
+import { useStore } from '../store';
+import { produce } from 'immer';
+import { getCI } from '../store';
+import { shallow } from 'zustand/shallow';
 
 export default function C() {
-  const context = useContext(ancestorContext);
-
   return (
-    <CContext.Provider value={{ ...context.ci, dispatch: context?.dispatch }}>
-      <div className='box'>
-        C
-        <Add />
-      </div>
-    </CContext.Provider>
+    <div className='box'>
+      C
+      <Add />
+    </div>
   );
 }
 function Add() {
-  const value = useContext(CContext);
+  const store = useStore(getCI, shallow);
   console.log('C render');
   return (
     <div>
-      <Counter name={'C'} count={value!.count} />
+      <Counter name={'C'} count={store.count} />
       <Button
         onClick={() => {
-          value?.dispatch!('C');
+          useStore.setState({
+            ci: {
+              count: store.count + 1
+            }
+          });
         }}
       >
         +1

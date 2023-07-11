@@ -1,30 +1,39 @@
-import React, { useContext } from 'react';
 import { Button } from 'antd';
-import ancestorContext, { AContext } from '../context';
 import Counter from './Counter';
+import { useStore } from '../store';
+import { produce } from 'immer';
+import { shallow } from 'zustand/shallow';
+import { getAI } from '../store';
+import { count } from 'console';
 
 export default function A() {
-  const context = useContext(ancestorContext);
-
   return (
-    <AContext.Provider value={{ ...context!.ai, dispatch: context?.dispatch }}>
-      <div className='box'>
-        A
-        <Add />
-      </div>
-    </AContext.Provider>
+    <div className='box'>
+      A
+      <Add />
+    </div>
   );
 }
 
 function Add() {
-  const value = useContext(AContext);
+  const store = useStore(getAI, shallow);
   console.log('A render');
   return (
     <div>
-      <Counter name={'A'} count={value!.count} />
+      <Counter name={'A'} count={store.count} />
       <Button
         onClick={() => {
-          value?.dispatch!('A');
+          // useStore.setState(
+          //   produce(store, (draft) => {
+          //     draft.count += 1;
+          //   })
+          // );
+
+          useStore.setState({
+            ai: {
+              count: store.count + 1
+            }
+          });
         }}
       >
         +1
