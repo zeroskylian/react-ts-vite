@@ -15,18 +15,13 @@ export default function B() {
 
 function Add() {
   const store = useStore(getBI, shallow);
-  const api = useStoreApi();
   console.log('B render');
   return (
     <div>
-      <Counter name={'B'} count={store.count} />
+      <Counter name={'B'} count={store.count.count} />
       <Button
         onClick={() => {
-          api.setState({
-            bi: {
-              count: store.count + 1
-            }
-          });
+          store.updateCount('B', 2);
         }}
       >
         +1
