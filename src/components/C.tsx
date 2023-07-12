@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import Counter from './Counter';
 import { Button } from 'antd';
-import { useStore } from '../store';
+import { useStore } from '../store/store';
 import { produce } from 'immer';
-import { getCI } from '../store';
+import { getCI } from '../store/store';
 import { shallow } from 'zustand/shallow';
 
 export default function C() {

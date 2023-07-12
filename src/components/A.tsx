@@ -1,9 +1,9 @@
 import { Button } from 'antd';
 import Counter from './Counter';
-import { useStore } from '../store';
+import { useStore } from '../store/store';
 import { produce } from 'immer';
 import { shallow } from 'zustand/shallow';
-import { getAI } from '../store';
+import { getAI } from '../store/store';
 import { count } from 'console';
 
 export default function A() {
